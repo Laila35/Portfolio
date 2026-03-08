@@ -1,0 +1,60 @@
+.education-section, .certification-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .section-title {
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #050f0b; // Default Light Mode
+  }
+
+  .education-grid, .certification-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .education-card, .certification-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .edu-icon, .cert-icon {
+      font-size: 2.5rem;
+      color: #5000ca; // Purple accent
+    }
+
+    .edu-details, .cert-details {
+      h6 { font-weight: bold; color: #000; }
+      .subtitle { color: #555; font-weight: 600; }
+      .date { color: #777; font-style: italic; margin-bottom: 5px; display: block; }
+      .desc { color: #333; }
+    }
+  }
+}
+
+/* --- DARK MODE SUPPORT --- */
+body.dark-mode, .dark-mode, .dark {
+  .section-title { color: white !important; }
+  
+  .education-card, .certification-card {
+    background: #1b1b1b; // Dark card background
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+
+    .edu-details, .cert-details {
+      h6 { color: white !important; }
+      .subtitle { color: #ccc !important; }
+      .date { color: #aaa !important; }
+      .desc { color: #ddd !important; }
+    }
+  }
+}

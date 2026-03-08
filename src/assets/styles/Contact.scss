@@ -1,0 +1,111 @@
+.contact_wrapper {
+  h1, p {
+    // Ensure the header text is visible (adjust color if needed)
+    color: #050f0b; 
+  }
+  
+  svg {
+    font-size: 1em;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
+
+.contact-form {
+  padding-top: 20px;
+  width: 100%;
+
+  // 1. Target the TextFields specifically
+  .MuiTextField-root {
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
+
+  // 2. FORCE the input text color to be black
+  // This targets the actual <input> element inside the component
+  .MuiInputBase-input {
+    color: #000000 !important; 
+    -webkit-text-fill-color: #000000 !important; // Fix for Chrome autofill
+  }
+
+  // 3. FORCE the Label color (e.g., "Your Name")
+  .MuiInputLabel-root {
+    color: #555555 !important; // Dark gray for readability
+  }
+
+  // 4. Label color when you click inside (Focus state)
+  .MuiInputLabel-root.Mui-focused {
+    color: #5000ca !important; // Purple accent
+  }
+
+  // 5. Border styles
+  .MuiOutlinedInput-notchedOutline {
+    border-color: #ccc !important;
+  }
+  
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #000 !important;
+  }
+
+  // Button Styles
+  button {
+    float: right;
+    background-color: white;
+    color: #050f0b;
+    font-weight: bold;
+    border: 1px solid #050f0b;
+    
+    &:hover {
+      background-color: #5000ca;
+      color: white;
+      border-color: #5000ca;
+    }
+  }
+}
+
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+  
+  // Make it stack on mobile
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Add this to the bottom of Contact.scss */
+
+/* If the body has a dark class (common in templates) */
+body.dark-mode .contact_wrapper h1,
+body.dark-mode .contact_wrapper p,
+.dark .contact_wrapper h1,
+.dark .contact_wrapper p {
+  color: white !important;
+}
+
+/* --- PASTE AT THE BOTTOM OF Contact.scss --- */
+
+/* 1. Default Color (Light Mode) */
+.contact_wrapper .contact-title,
+.contact_wrapper .contact-desc {
+  color: #050f0b; /* Black */
+  transition: color 0.3s ease;
+}
+
+/* 2. Dark Mode Overrides */
+/* We list multiple common class names because we don't know exactly which one your template uses. */
+/* One of these will catch it! */
+
+body.dark-mode .contact_wrapper .contact-title,
+body.dark-mode .contact_wrapper .contact-desc,
+.dark-mode .contact_wrapper .contact-title,
+.dark-mode .contact_wrapper .contact-desc,
+.dark .contact_wrapper .contact-title,
+.dark .contact_wrapper .contact-desc,
+[data-theme="dark"] .contact_wrapper .contact-title,
+[data-theme="dark"] .contact_wrapper .contact-desc {
+  color: white !important;
+}
