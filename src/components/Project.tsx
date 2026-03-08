@@ -33,8 +33,9 @@ function Project() {
                 <p>YFCampus-1 Tutoring Platform – Developed a SEO-optimized full-stack dynamic web application for YFC Solution designed to provide online home tutoring services to students worldwide, including USA, UK, Canada, Australia, and Pakistan. The platform offers tutoring in Quran, English, Physics, Mathematics, and Computer Science. It was built using Next.js with TypeScript and Tailwind CSS for a fast and responsive user interface, with MongoDB as the database. Prismic.io was integrated as a headless CMS for dynamic blog and content management. The system also integrates Meta Cloud WhatsApp API for real-time communication and NodeMailer API for automated email notifications, enabling seamless interaction between students and tutors..</p>
             </div>
             <div className="project">
-                <a href="" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="" target="_blank" rel="noreferrer"><h2>TalentFlow</h2></a>
+                {/* TODO: replace placeholder URL with actual project link when available */}
+                <a href="https://example.com" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://example.com" target="_blank" rel="noreferrer"><h2>TalentFlow</h2></a>
                 <p>TalentFlow is a next-generation HR AI Automation platform designed to revolutionize the recruitment lifecycle by unifying candidate tracking, communication, and analytics into a single, intelligent interface. At its core, TalentFlow leverages advanced automation to streamline repetitive HR tasks—from screening resumes and scheduling interviews to managing candidate pipelines—empowering hiring teams to focus on strategic decision-making rather than administrative overhead. By centralizing data and automating workflows, it ensures a faster, more efficient hiring process that enhances both recruiter productivity and the candidate experience.</p>
             </div>
         </div>
